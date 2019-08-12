@@ -1,0 +1,33 @@
+body {
+    background: url('../images/brick-wall.jpg');
+    background-size: 1440px 780px;
+}
+
+h1 {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    color: #2280e7;
+    padding-top: 20px;
+}
+
+.timer {
+    font-family: 'Love Ya Like A Sister', cursive;
+    text-align: center;
+    color: #c20404;
+    font-size: 26px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.row div{
+    background: #2280e7;
+    border:2px solid #e8b10e;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.row div, img {
+    width: 123px;
+    height: 100px;
+}
