@@ -10,10 +10,15 @@ h1 {
     padding-top: 20px;
 }
 
+.imgContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
 .timer {
     font-family: 'Love Ya Like A Sister', cursive;
     text-align: center;
-    color: #c20404;
+    color: #e8b10e;
     font-size: 26px;
     padding: 10px;
     margin-top: 15px;
@@ -22,12 +27,27 @@ h1 {
 
 .row div{
     background: #2280e7;
-    border:2px solid #e8b10e;
+    border:3px solid #e8b10e;
     margin-bottom: 20px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .row div, img {
-    width: 123px;
-    height: 100px;
+    /* width: 123px;
+    height: 100px; */
+    width: 125px;
+    height: 118px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    text-align: center;
+    color: #2280e7;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 3px;
 }
