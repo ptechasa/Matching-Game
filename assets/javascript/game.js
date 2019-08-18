@@ -6,9 +6,9 @@ var firebaseConfig = {
     storageBucket: "",
     messagingSenderId: "793782454862",
     appId: "1:793782454862:web:4223b1cc2cde498b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 var db = firebase.database()
 var formName;
 
@@ -67,7 +67,7 @@ var userName;
 var rows = 3;
 var cols = 4;
 
-$('button').on('click', function() {
+$('button').on('click', function () {
     // Input the user names;
     userName = $('#userName').val();
 
@@ -117,10 +117,10 @@ $('button').on('click', function() {
 
     var $container = $('.container');
     for (var row = 0; row < rows; row++) {
-        var $cardRowElem = $('<div class="row"></div>');
+        var $cardRowElem = $('<div class="row justify-content-center"></div>');
         for (var col = 0; col < cols; col++) {
             var idx = row * cols + col;
-            var $card = $('<div class="imgContainer"><img class="hide" src="' + imageUrls[imageIdxs[idx]] + '"></div>');
+            var $card = $('<div class="imgContainer mx-1"><img class="hide" src="' + imageUrls[imageIdxs[idx]] + '"></div>');
             $cardRowElem.append($card);
         }
         $container.append($cardRowElem);
@@ -163,7 +163,7 @@ function shuffle(array) {
 var $firstImg;
 var $secondImg;
 
-$(document).on('click', '.imgContainer', function() {
+$(document).on('click', '.imgContainer', function () {
 
     // If either one is empty;
     if ((firstSrc == undefined) || (secondSrc == undefined)) {
@@ -186,7 +186,7 @@ $(document).on('click', '.imgContainer', function() {
             $secondImg = $img;
         }
         // If the last two images clicked on match, it would keep them turned over; else, keep them hidden; 
-        var timer = setTimeout(function() {
+        var timer = setTimeout(function () {
 
             // Both are not empty;
             if ((firstSrc != undefined) && (secondSrc != undefined)) {
