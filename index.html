@@ -10,118 +10,63 @@
         href="http://icons.iconarchive.com/icons/sbstnblnd/plateau/512/Apps-colors-icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Monoton|Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Love+Ya+Like+A+Sister|Righteous&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
     <h1>Matching Game</h1>
-    <div class="timer">Time Remaining: <span>30</span> seconds</div>
+    <h3>Time Remaining: <span id="timer"></span></h3>
+    <h3>Score: <span id="score"></span></h3>
 
-    <form id="nameForm">
-        <lable>Name</lable>
-        <input id="userName" type="text">
+    <h3 id="h2UserNameGoesHere" class="hide">How fast you can get to match 6 pairs, <span id="userNameGoesHere"></span>?
+    </h3>
 
-        <select id="level">
+    <form id="formName">
+        <lable>Username</lable>
+        <input id="userName" type="text" placeholder="Your name">
+
+        <select id="level" required>
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
         </select>
 
-        <button id="btnSubmit">Submit</button>>
+        <button id="btnSubmit">Start</button>
     </form>
-    <!-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-            <div class="col-xs-1 row-height"></div>
-        </div> -->
 
-    <div class="container imgContainer" id="imgContainer">
+    <table id="highScores" class="table">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>time left</th>
+                <th>score</th>
+                <th>difficulty</th>
+                <th>date</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
+    <div class="container hide">
     </div>
 
-        <div class="row justify-content-center">
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media0.giphy.com/media/l0MYNJC1oGwKLfqso/200.webp?cid=790b7611d34c1c000e51269097b60ed2641e1d871812a2fc&rid=200.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media2.giphy.com/media/UtvkbCvOJCJtC/200w.webp?cid=790b7611361e9dda43fa5d4ceadefc1d6ffba77218c5b525&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media2.giphy.com/media/k8kA7AOLFVohq/200.webp?cid=790b7611361e9dda43fa5d4ceadefc1d6ffba77218c5b525&rid=200.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media1.giphy.com/media/cQz5MLlnP5rfa/200.webp?cid=790b7611561f26b842f49393a2fbf4e32a0542969b591acd&rid=200.webp">
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media2.giphy.com/media/UtvkbCvOJCJtC/200w.webp?cid=790b7611361e9dda43fa5d4ceadefc1d6ffba77218c5b525&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media3.giphy.com/media/3ov9k4e03yTNRWTgYM/200w.webp?cid=790b7611fc7ad1db280bdc6f9bb012ccc148ab3e0adda710&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media3.giphy.com/media/9MraLzmkWiZqM/200w.webp?cid=790b7611561f26b842f49393a2fbf4e32a0542969b591acd&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media1.giphy.com/media/cQz5MLlnP5rfa/200.webp?cid=790b7611561f26b842f49393a2fbf4e32a0542969b591acd&rid=200.webp">
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-xs-1 row-height">
-                <img class="hide"
-                    src="https://media3.giphy.com/media/3ov9k4e03yTNRWTgYM/200w.webp?cid=790b7611fc7ad1db280bdc6f9bb012ccc148ab3e0adda710&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media2.giphy.com/media/k8kA7AOLFVohq/200.webp?cid=790b7611361e9dda43fa5d4ceadefc1d6ffba77218c5b525&rid=200.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media3.giphy.com/media/9MraLzmkWiZqM/200w.webp?cid=790b7611561f26b842f49393a2fbf4e32a0542969b591acd&rid=200w.webp">
-            </div>
-            <div class="col-xs-3 row-height">
-                <img class="hide"
-                    src="https://media0.giphy.com/media/l0MYNJC1oGwKLfqso/200.webp?cid=790b7611d34c1c000e51269097b60ed2641e1d871812a2fc&rid=200.webp">
-            </div>
-        </div>
-
-        <div class="footer">© Copyright 2019</div>
-    </div>
+    <div class="footer">© Copyright 2019</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script>
+    <script type="text/javascript">
+    </script>
+
     <script src="assets/javascript/game.js"></script>
 </body>
-
 </html>

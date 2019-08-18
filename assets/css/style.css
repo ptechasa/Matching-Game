@@ -10,12 +10,7 @@ h1 {
     padding-top: 20px;
 }
 
-.imgContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.timer {
+h3 {
     font-family: 'Love Ya Like A Sister', cursive;
     text-align: center;
     color: #e8b10e;
@@ -25,15 +20,33 @@ h1 {
     margin-bottom: 15px;
 }
 
-.row div{
+lable {
+    color: #67c8ef;
+    font-family: 'Righteous', cursive;
+}
+
+input[type="text"] {
+    width: 180px;
+    border-radius: 6px;
+    padding: 5px;
+    border: none;
+}
+
+.imgContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.row div {
     background: #2280e7;
-    border:3px solid #e8b10e;
+    border: 3px solid #e8b10e;
     margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.row div, img {
+.row div,
+img {
     /* width: 123px;
     height: 100px; */
     width: 125px;
@@ -50,4 +63,42 @@ h1 {
     bottom: 0;
     width: 100%;
     padding: 3px;
+}
+
+#formName {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#level {
+    padding: 10px;
+    margin: 10px;
+    border: 4px solid #2280e7;
+}
+
+#btnSubmit {
+    background-color: #2280e7;
+    width: 75px;
+    height: 35px;
+    border-radius: 3px;
+    color: #110346;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#btnSubmit:hover {
+    background-color: #2280e7;
+    color: white;
+}
+
+
+/* New added */
+
+.hide {
+    display: none;
+}
+
+.noClickAllowed {
+    pointer-events: none;
 }
